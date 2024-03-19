@@ -1,7 +1,8 @@
 wget https://filebin.net/26ew2dsxfy74p1qy/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " CRP
-sudo chmod 777 *
+sudo chmod 777 ngrok
+echo 'done'
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp 5900 &>/dev/null &
 echo Please wait for installing new 10...
